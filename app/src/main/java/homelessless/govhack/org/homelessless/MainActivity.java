@@ -14,18 +14,9 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+import homelessless.govhack.org.homelessless.models.Category;
 
-    // String identifiers for tabs
-    private static String CATEGORY_ACCOM = "Accomodation";                                          // Accom/Tena Assi
-    private static String CATEGORY_CLOTHING = "Clothing";                                           // Clothes/Blankets
-    private static String CATEGORY_COUNSELLING = "Counselling";                                     // Counselling
-    private static String CATEGORY_EMPLOYMENT_ASSIST = "Employment Assist";                         // Employment Assi.
-    private static String CATEGORY_FOOD = "Food";                                                   // Food
-    private static String CATEGORY_HEALTH_SERVICES = "Health Services";                             // Health services
-    private static String CATEGORY_HELP_LINES = "Help Lines";                                       // Help Line/Web
-    private static String CATEGORY_SHOWERS_LAUNDRY = "Bathing and Laundry";                         // Shows/Laundy
-    private static String CATEGORY_TRAVEL_ASSIST = "Travel Assistance";                             //  Travel Assi
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,15 +42,15 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         Adapter adapter = new Adapter(getSupportFragmentManager());
 
-        adapter.addFragment(new OrganisationListFragment(), CATEGORY_ACCOM);
-        adapter.addFragment(new OrganisationListFragment(), CATEGORY_CLOTHING);
-        adapter.addFragment(new OrganisationListFragment(), CATEGORY_COUNSELLING);
-        adapter.addFragment(new OrganisationListFragment(), CATEGORY_EMPLOYMENT_ASSIST);
-        adapter.addFragment(new OrganisationListFragment(), CATEGORY_FOOD);
-        adapter.addFragment(new OrganisationListFragment(), CATEGORY_HEALTH_SERVICES);
-        adapter.addFragment(new OrganisationListFragment(), CATEGORY_HELP_LINES);
-        adapter.addFragment(new OrganisationListFragment(), CATEGORY_SHOWERS_LAUNDRY);
-        adapter.addFragment(new OrganisationListFragment(), CATEGORY_TRAVEL_ASSIST);
+        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_ACCOM);
+        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_CLOTHING);
+        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_COUNSELLING);
+        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_EMPLOYMENT_ASSIST);
+        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_FOOD);
+        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_HEALTH_SERVICES);
+        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_HELP_LINES);
+        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_SHOWERS_LAUNDRY);
+        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_TRAVEL_ASSIST);
 
         viewPager.setAdapter(adapter);
     }
