@@ -49,9 +49,25 @@ public class OrganisationListFragment extends ListFragment {
 
     }
 
-    static class Adapter extends ArrayAdapter<Organisation> {
+    class Adapter extends ArrayAdapter<Organisation> {
         public Adapter(Context context, List<Organisation> organisations) {
-            super(context, android.R.layout.two_line_list_item, android.R.id.text1, organisations);
+            super(context, android.R.layout.two_line_list_item, organisations);
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            if ( convertView == null ) {
+                convertView = getActivity().getLayoutInflater().inflate(R.layout.org_list_item, parent, false);
+            }
+
+            TextView name = (TextView)convertView.findViewById(R.id.name);
+            TextView desc = (TextView)convertView.findViewById(R.id.desc);
+
+            name.setText(getItem(position).getName());
+            desc.setText(getItem(position).getDescription());
+
+            return convertView;
         }
     }
 }

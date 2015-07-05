@@ -11,6 +11,7 @@ public class Organisation implements Serializable {
     private String description; // What?
     private String targetAudience; // Who is the service for? (Can be null).
     private String operatingHours;
+    private String subCategoryName;
 
     public long getId() {
         return _id;
@@ -63,5 +64,13 @@ public class Organisation implements Serializable {
     @Override
     public String toString() {
         return getName();
+    }
+
+    public void setSubCategoryName(String subCategoryName) {
+        this.subCategoryName = subCategoryName;
+    }
+
+    public String getSubCategoryName() {
+        return this.subCategoryName;
     }
 }
