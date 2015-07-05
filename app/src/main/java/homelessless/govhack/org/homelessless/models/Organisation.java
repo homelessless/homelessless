@@ -59,4 +59,9 @@ public class Organisation implements Serializable {
     public void setOperatingHours(String operatingHours) {
         this.operatingHours = operatingHours;
     }
+
+    @Override
+    public String toString() {
+        return getName();
+    }
 }

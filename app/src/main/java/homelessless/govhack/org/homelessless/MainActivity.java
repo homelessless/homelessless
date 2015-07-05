@@ -42,15 +42,15 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         Adapter adapter = new Adapter(getSupportFragmentManager());
 
-        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_ACCOM);
-        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_CLOTHING);
-        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_COUNSELLING);
-        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_EMPLOYMENT_ASSIST);
-        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_FOOD);
-        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_HEALTH_SERVICES);
-        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_HELP_LINES);
-        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_SHOWERS_LAUNDRY);
-        adapter.addFragment(new OrganisationListFragment(), Category.CATEGORY_TRAVEL_ASSIST);
+        adapter.addFragment(new OrganisationListFragment(Category.CATEGORY_ACCOM_ID), Category.CATEGORY_ACCOM);
+        adapter.addFragment(new OrganisationListFragment(Category.CATEGORY_CLOTHING_ID), Category.CATEGORY_CLOTHING);
+        adapter.addFragment(new OrganisationListFragment(Category.CATEGORY_COUNSELLING_ID), Category.CATEGORY_COUNSELLING);
+        adapter.addFragment(new OrganisationListFragment(Category.CATEGORY_EMPLOYMENT_ASSIST_ID), Category.CATEGORY_EMPLOYMENT_ASSIST);
+        adapter.addFragment(new OrganisationListFragment(Category.CATEGORY_FOOD_ID), Category.CATEGORY_FOOD);
+        adapter.addFragment(new OrganisationListFragment(Category.CATEGORY_HEALTH_SERVICES_ID), Category.CATEGORY_HEALTH_SERVICES);
+        adapter.addFragment(new OrganisationListFragment(Category.CATEGORY_HELP_LINES_ID), Category.CATEGORY_HELP_LINES);
+        adapter.addFragment(new OrganisationListFragment(Category.CATEGORY_SHOWERS_LAUNDRY_ID), Category.CATEGORY_SHOWERS_LAUNDRY);
+        adapter.addFragment(new OrganisationListFragment(Category.CATEGORY_TRAVEL_ASSIST_ID), Category.CATEGORY_TRAVEL_ASSIST);
 
         viewPager.setAdapter(adapter);
     }

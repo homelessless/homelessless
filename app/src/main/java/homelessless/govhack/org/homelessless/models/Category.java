@@ -1,6 +1,10 @@
 package homelessless.govhack.org.homelessless.models;
 
+import android.os.Parcelable;
+import android.util.Log;
+
 import java.io.Serializable;
+import java.util.HashMap;
 
 public class Category implements Serializable {
 
@@ -23,7 +27,6 @@ public class Category implements Serializable {
     public static String CATEGORY_HELP_LINES = "Help Lines";                                       // Help Line/Web    7
     public static String CATEGORY_SHOWERS_LAUNDRY = "Bathing and Laundry";                         // Shows/Laundy 8
     public static String CATEGORY_TRAVEL_ASSIST = "Travel Assistance";                             //  Travel Assi 9
-
 
     private long _id;
     private String title;

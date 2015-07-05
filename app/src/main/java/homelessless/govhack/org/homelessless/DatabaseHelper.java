@@ -64,9 +64,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         database.execSQL("INSERT INTO \"organisations\" VALUES (11, 'Victims of Crime Help Line', 7, 'Helpful phone number', '', '', NULL);");
     }
 
-    public List<Organisation> getOrganisationList() {
+    public List<Organisation> getOrganisationList( int categoryId ) {
         ArrayList<Organisation> contents = new ArrayList<>();
-        Cursor cursor = getWritableDatabase().rawQuery("SELECT * FROM organisations", null);
+        Cursor cursor = getWritableDatabase().rawQuery("SELECT * FROM organisations WHERE " + COLUMN_CATEGORY_ID + " = " + categoryId, null);
 
         if (cursor .moveToFirst()) {
             while (cursor.isAfterLast() == false) {
