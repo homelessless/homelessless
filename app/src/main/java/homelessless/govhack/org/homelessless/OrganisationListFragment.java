@@ -46,7 +46,6 @@ public class OrganisationListFragment extends ListFragment {
         DatabaseHelper helper = new DatabaseHelper( getActivity() );
         adapter = new Adapter( getActivity(), helper.getOrganisationList( catId ) );
         setListAdapter( adapter );
-
     }
 
     static class Adapter extends ArrayAdapter<Organisation> {
